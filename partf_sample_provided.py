@@ -84,7 +84,7 @@ def main(args):
         numerator += Decimal(tree_probs[i] * cond_probs[i][0] / cond_probs[i][1]) * Decimal(tree_counts[i])
         denominator += Decimal(tree_probs[i]) * Decimal(tree_counts[i])
 
-    output = path + "\t" + trees + "\t" + mutation + "\t" + str(alpha) + "\t" + str(beta) + "\t" + str(num_samples) + "\t" + str(Decimal(numerator)) + "\t" + str(Decimal(denominator))
+    output = path + "\t" + trees + "\t" + mutation + "\t" + ",".join(cells) + "\t" + str(alpha) + "\t" + str(beta) + "\t" + str(num_samples) + "\t" + str(Decimal(numerator)) + "\t" + str(Decimal(denominator))
     print(output)
 
 if __name__ == "__main__":
